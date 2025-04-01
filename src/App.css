@@ -342,58 +342,69 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/************ Projects Css ************/
+/************ Projects Section CSS ************/
+
 .project {
   padding: 80px 0;
   position: relative;
-  background-color: black;
+  background-image: url('./assets/img/color-sharp.png'); /* Replace with your image path */
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
 }
+
 .project h2 {
-	font-size: 45px;
-	font-weight: 700;
+  font-size: 3rem; /* Increased size for better readability */
+  font-weight: 700;
   text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
 }
+
 .project p {
   color: #B8B8B8;
-  font-size: 18px;
+  font-size: 1.1rem; /* Slightly larger text for better legibility */
   letter-spacing: 0.8px;
-  line-height: 1.5em;
-  margin: 14px auto 30px auto;
+  line-height: 1.6em; /* Increased line-height for easier reading */
+  margin: 20px auto 30px auto;
   text-align: center;
-  width: 56%;
+  width: 60%; /* Adjusted width for better text flow */
 }
+
 .project .nav.nav-pills {
-  width: 72%;
+  width: 80%;
   margin: 0 auto;
   border-radius: 50px;
-  background-color: rgb(255 255 255 / 10%);
+  background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
   overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Added shadow for depth */
 }
+
 .project .nav.nav-pills .nav-item {
   width: 33.33333%;
 }
+
 .project .nav.nav-pills .nav-link {
   background-color: transparent;
   border-radius: 0;
-  padding: 17px 0;
+  padding: 18px 0; /* Slightly larger padding for better touch targets */
   color: #fff;
-  width: 100%;
-  font-size: 17px;
-  letter-spacing: 0.8px;
+  font-size: 1.1rem; /* Adjusted font size */
+  letter-spacing: 1px; /* Increased letter spacing for a modern touch */
   font-weight: 500;
   position: relative;
-  transition: 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   text-align: center;
   z-index: 0;
 }
 
-
 .project .nav.nav-pills .nav-link::before {
   content: "";
   position: absolute;
-  width: 100%; /* Fill the entire width */
-  height: 100%; /* Fill the entire height */
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#000000);
   top: 0;
   left: 0;
   z-index: -1;
@@ -401,36 +412,54 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .project .nav.nav-pills .nav-link.active::before {
-    width: 100% !important;
-}
-.project .nav.nav-pills .nav-link.active {
-    border: 1px solid rgba(255, 255, 255, 1);
+  width: 100% !important;
 }
 
+.project .nav.nav-pills .nav-link.active {
+  border: 1px solid rgba(255, 255, 255, 0.7); /* Softer border for a modern look */
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%); /* Gradient background */
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: all 0.3s ease-in-out;
+}
+.project .nav.nav-pills .nav-link.active:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
 
 .nav-link#projects-tabs-tab-first {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
+/* Project Image Box */
 .proj-imgbx {
   position: relative;
-  border-radius: 30px;
+  border-radius: 20px; /* Slightly less rounded corners */
   overflow: hidden;
   margin-bottom: 24px;
+  transition: transform 0.3s ease-in-out;
 }
-.proj-imgbx::before {
+
+.proj-imgbx:hover {
+  transform: scale(1.05); /* Scale up effect on hover for depth */
+}
+
+.project::before {
   content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  opacity: 0.85;
   position: absolute;
-  width: 100%;
-  height: 0;
-  transition: 0.4s ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
+  z-index: -1;
 }
 .proj-imgbx:hover::before {
-  height: 100%;
+  height: 100%; /* Expand the overlay on hover */
 }
+
 .proj-txtx {
   position: absolute;
   text-align: center;
@@ -441,22 +470,26 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   opacity: 0;
   width: 100%;
 }
+
 .proj-imgbx:hover .proj-txtx {
   top: 50%;
-  opacity: 1;
+  opacity: 1; /* Make the text visible when hovered */
 }
+
 .proj-txtx h4 {
-  font-size: 30px;
+  font-size: 2rem; /* Larger text size for the project title */
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1.1em;
 }
+
 .proj-txtx span {
   font-style: italic;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 1.1rem; /* Slightly larger font size */
   letter-spacing: 0.8px;
 }
+
 .background-image-right {
   top: 20%;
   position: absolute;
@@ -466,101 +499,188 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/************ Projects Css ************/
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .project h2 {
+    font-size: 2.2rem; /* Slightly smaller title size for mobile */
+  }
+
+  .project p {
+    font-size: 1rem;
+    width: 80%; /* Adjust text width for smaller screens */
+  }
+
+  .project .nav.nav-pills {
+    width: 90%; /* Make nav pills more mobile-friendly */
+  }
+
+  .project .nav.nav-pills .nav-link {
+    font-size: 1rem; /* Adjust font size for better readability on mobile */
+  }
+
+  .proj-imgbx {
+    margin-bottom: 20px; /* Reduce margin for mobile screens */
+  }
+
+  .proj-txtx h4 {
+    font-size: 1.5rem; /* Smaller title size on mobile */
+  }
+
+  .proj-txtx span {
+    font-size: 1rem; /* Adjust span font size */
+  }
+}
+
+/************ contact css ************/
+
 .contact {
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  padding: 60px 0 200px 0;
-}
-.contact img {
-  width: 92%;
-}
-.contact h2 {
-	font-size: 45px;
-	font-weight: 700;
-  margin-bottom: 30px;
-}
-.contact form input, .contact form textarea {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
-  color: #fff;
-  margin: 0 0 8px 0;
-  padding: 18px 26px;
-  font-weight: 500;
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  transition: 0.3s ease-in-out;
-}
-.contact form input:focus, .contact form textarea:focus {
-  background: rgba(255, 255, 255, 1);
-  color: #121212;
-}
-.contact form input::placeholder, .contact form textarea::placeholder {
-  font-size: 16px;
-  font-weight: 400;
-  color: #fff;
-}
-.contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
-  color: #121212;
-  opacity: 0.8;
-}
-.contact form button {
-  font-weight: 700;
-  color: #000;
-  background-color: #fff;
-  padding: 14px 48px;
-  font-size: 18px;
-  margin-top: 25px;
-  border-radius: 0;
+  padding: 80px 0;
   position: relative;
-  transition: 0.3s ease-in-out;
-}
-.contact form button span {
-  z-index: 1;
-  position: relative;
-}
-.contact form button:hover {
+  background-image: url('./assets/img/color-sharp2.png'); /* Replace with your image path */
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #fff;
 }
-.contact form button::before {
+
+.contact::before {
   content: "";
-  background: #121212;
-  width: 0;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 0;
-  transition: 0.3s ease-in-out;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for better text visibility */
+  z-index: -1;
 }
-.contact form button:hover::before {
-  width: 100%;
+.contact h2 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px #000000;
+  letter-spacing: 1px;
 }
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.4rem;
+  color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-item:hover {
+  transform: translateX(10px); /* Adds slight hover movement for interaction */
+}
+
+.contact-item a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.contact-item a:hover {
+  color: #0056b3;
+  transform: translateY(-3px); /* Adds subtle hover effect */
+}
+
+.contact-icon {
+  width: 35px;
+  height: 35px;
+  fill: #fff;
+  transition: fill 0.3s ease-in-out;
+}
+
+.contact-icon:hover {
+  fill: #007bff; /* Hover effect on the icons */
+}
+
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 20px;
+  }
+
+  .contact-info {
+    gap: 20px;
+  }
+
+  .contact-item {
+    font-size: 1.2rem;
+  }
+
+  .contact h2 {
+    font-size: 2.2rem;
+  }
+
+}
+
+
+/************ Contact Css ************/
+
 .resume-download-box {
   text-align: center;
-  padding: 20px;
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  opacity: 0.85;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
-  max-width: 500px;
+  padding: 30px;
+  background-image: url('./assets/img/footer-bg.png');
+  opacity: 0.9;
+  border-radius: 15px; /* Soft rounded corners */
+  box-shadow: 0px 10px 30px rgba(255, 254, 254, 0); /* Subtle shadow for a floating effect */
+  margin: 40px auto;
+  max-width: 550px; /* Slightly larger max width for better presentation */
+  transition: all 0.3s ease-in-out;
+}
+
+.resume-download-box:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0); /* Stronger shadow on hover */
 }
 
 .download-btn {
   display: inline-block;
-  padding: 12px 20px;
-  font-size: 18px;
-  color: white;
-  background-color: linear-gradient(90.21deg, #ff0000 -5.91%, #2f00ff 111.58%);
-  border-radius: 5px;
+  padding: 14px 25px;
+  font-size: 20px;
+  color: #fff;
+  background: linear-gradient(90.21deg, #ff0000 -5.91%, #2f00ff 111.58%);
+  border-radius: 30px; /* Pill shape for a modern button look */
   text-decoration: none;
-  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .download-btn:hover {
-  background-color: #ffffff;
+  background: linear-gradient(90.21deg, #ffffff -5.91%, #4CAF50 111.58%); /* New gradient on hover */
+  color: #333; /* Darker text for contrast */
+  transform: scale(1.05); /* Slight scale-up on hover */
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+}
+
+.download-btn:active {
+  transform: scale(0.98); /* Slight scale-down on click for interactive feedback */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow on click */
+}
+
+@media (max-width: 768px) {
+  .resume-download-box {
+    padding: 20px;
+    max-width: 450px; /* Slightly smaller max width for mobile devices */
+  }
+
+  .download-btn {
+    font-size: 18px; /* Adjust font size for smaller screens */
+    padding: 12px 20px; /* Adjust padding for a better fit */
+  }
 }
 
 

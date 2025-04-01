@@ -12,7 +12,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Computer Science Student.", "ML Enthusiast.", "Web Developer." ];
+  const toRotate = ["Computer Science Student.", "ML Enthusiast.", "Web Developer."];
   const period = 2000;
 
   useEffect(() => {
@@ -49,11 +49,11 @@ export const Banner = () => {
   }
 
   const defaultOptions = {
-    loop: true, 
-    autoplay: true, 
-    animationData: animationData, 
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
     rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice', // Keeps aspect ratio
+      preserveAspectRatio: 'xMidYMid slice',
     },
   };
 
@@ -68,7 +68,7 @@ export const Banner = () => {
                   <span className="tagline">Welcome to my Portfolio</span>
                   <h1>{`Hi! I'm Pratik`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Computer Science Student.", "ML Enthusiast.", "Web Developer." ]'><span className="wrap">{text}</span></span></h1>
                   <p>Hey there! I'm Pratik, a passionate and curious tech enthusiast driven by innovation and problem-solving. From crafting smart solutions with Python to diving into the world of AI and web development, I thrive on turning ideas into impactful digital experiences. Whether it’s building data-driven applications, exploring machine learning, or designing sleek user interfaces, I’m all about blending creativity with code. Let’s connect and create something awesome together!</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  <button onClick={() => window.open('https://www.linkedin.com/in/pratiksarkar4/', '_blank')}>Let’s Connect <ArrowRightCircle size={25} /></button>
                 </div>
               }
             </TrackVisibility>
